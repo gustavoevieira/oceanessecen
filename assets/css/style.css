@@ -1,0 +1,210 @@
+/* Reset de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --cor-primaria: #dfc594;
+    --cor-secundaria: #9c5c3c;
+    --cor-branca: #fff;
+    --cor-fundo-escuro: #80aae9;
+    --cor-fundo-azul: #5d9af6;
+}
+
+html, body {
+    height: 100%; /* Necessário para o sticky footer */
+    background-color: var(--cor-fundo-azul);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Faz o container ocupar pelo menos 100% da altura da tela */
+}
+
+header {
+    color: #fff; /* Cor do texto do header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px; /* Ajustar o padding para ser responsivo */
+}
+
+.logo {
+    font-size: 33px; /* Tamanho do texto do logotipo */
+    font-weight: bold; /* Peso da fonte */
+}
+
+.circle {
+    width: 80px; /* Diâmetro do círculo */
+    height: 80px; /* Diâmetro do círculo */
+    border-radius: 50%; /* Transforma em um círculo */
+    /* border: 4px solid #fff; Cor e espessura da borda */
+    color: #fff; /* Cor do texto dentro do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem linha se necessário */
+}
+
+nav ul li {
+    margin-left: 20px; /* Espaçamento entre os itens do menu */
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: #fff; /* Cor dos links do menu */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--cor-primaria); /* Cor dos links no hover */
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço disponível */
+    display: flex;
+    justify-content: center;
+    padding: 40px; /* Ajustar o padding para ser responsivo */
+    flex-wrap: wrap; /* Permite que as colunas quebrem linha se necessário */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Largura do contêiner principal */
+    max-width: 1200px; /* Largura máxima do contêiner principal */
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    text-align: center; /* Centraliza o texto em colunas menores */
+}
+
+.text-column h1, .text-column h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.text-column h1 {
+    font-size: 32px; /* Ajustar o tamanho da fonte para ser responsivo */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os links quebrem linha se necessário */
+}
+
+.social-links a {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    padding: 0 10px; /* Ajustar o padding para ser responsivo */
+}
+
+.image-column img {
+    width: 100%; /* Tornar a imagem responsiva */
+    height: auto;
+    max-width: 100%;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-branca);
+    padding: 20px 50px;
+    text-align: center;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-content p {
+    margin: 10px 0;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+}
+
+/* Media Queries para tornar o layout responsivo */
+@media (min-width: 768px) {
+    header {
+        padding: 20px 100px;
+    }
+
+    main {
+        flex-direction: row;
+        padding: 60px;
+    }
+
+    .content {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .text-column h1 {
+        font-size: 40px;
+    }
+
+    .image-column img {
+        width: 100%;
+        padding-left: 0;
+        max-width: 600px;
+    }
+
+    footer {
+        padding: 20px 100px;
+    }
+
+    footer .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer .social-links {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 20px 150px;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .image-column img {
+        max-width: 900px;
+    }
+
+    footer {
+        padding: 20px 150px;
+    }
+}

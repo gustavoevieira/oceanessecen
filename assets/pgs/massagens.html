@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/massagens.css">
+    <link rel="shortcut icon" href="../img/Icone site.png" type="image/x-icon">
+    <title>Massagens - Ocean Essence</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="circle">
+                    <img src="..//img/Icone site.png" alt="Logo" width="50px">
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="massagens.html">Massagens</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="title">
+            <h1>Nossos Serviços de Massagem</h1>
+        </div>    
+
+        <main>
+            <div class="content">
+                
+                <div class="services-gallery">
+                    <a href="Reflexologia.html" class="service-item">
+                        <h2>Reflexologia</h2><br>
+                        <img src="../img/reflexo-1.jpg" alt="Massagem 1" data-hover="../img/reflexo-2.jpg">
+                    </a>
+                    <a href="relaxante.html" class="service-item">
+                        <h2>Relaxante</h2> <br>
+                        <img src="../img/relaxante-1.jpg" alt="Massagem 2" data-hover="../img/relaxante-2.jpg">
+                    </a>
+                    <a href="shiatsu.html" class="service-item">
+                        <h2>Shiatsu</h2> <br>
+                        <img src="../img/Shiatsu-1.jpg" alt="Massagem 3" data-hover="../img/Shiatsu-2.jpg">
+                    </a>
+                    
+                    <a href="sueca.html" class="service-item">
+                        <h2>Sueca</h2><br>
+                        <img src="../img/Sueca-1.jpg" alt="Massagem 4" data-hover="../img/Sueca-2.jpg">
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Ocean Essence. Todos os direitos reservados.</p>
+                <p>Contato: <a href="jenifercamila831@gmail.com">jenifercamila831@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com" target="_blank"><img src="../img/instagram.png" alt="Instagram" width="30px"></a>
+                    <a href="https//wa.me/+5516991749674" target="_blank"><img src="../img/whatsapp.png" alt="WhatsApp" width="30px"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript para trocar as imagens ao passar o mouse
+        document.querySelectorAll('.service-item img').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.dataset.original = item.src;
+                item.src = item.dataset.hover;
+            });
+            item.addEventListener('mouseout', () => {
+                item.src = item.dataset.original;
+            });
+        });
+    </script>
+</body>
+
+</html>
